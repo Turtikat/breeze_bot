@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 🔍 Aseta tiedostonimi (vaihda tähän oikea nimi!)
-excel_file = "toh_weather_data_20250317.xlsx"
+excel_file = "weather_data.xlsx"
 
 # 📂 Luetaan Excel-tiedosto
 df = pd.read_excel(excel_file)
