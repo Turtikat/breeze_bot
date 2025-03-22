@@ -1,138 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-18T16:58:06.273101" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-22T10:06:24.583406" rpa="false" schemaversion="5">
 <suite id="s1" name="Breeze Bot" source="C:\Users\katja\breeze_bot\breeze_bot.robot">
 <test id="s1-t1" name="Open Weather Data Page" line="9">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:06.815165" level="INFO">Opening browser 'Chrome' to base url 'https://www.ilmatieteenlaitos.fi/havaintojen-lataus#!/'.</msg>
+<msg time="2025-03-22T10:06:25.111478" level="INFO">Opening browser 'Chrome' to base url 'https://www.ilmatieteenlaitos.fi/havaintojen-lataus#!/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T16:58:06.814839" elapsed="6.016433"/>
+<status status="PASS" start="2025-03-22T10:06:25.111140" elapsed="4.801759"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T16:58:12.831949" elapsed="0.235817"/>
+<status status="PASS" start="2025-03-22T10:06:29.913674" elapsed="0.155962"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Havaintojen lataus</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-03-18T16:58:13.068329" elapsed="0.077666"/>
+<status status="PASS" start="2025-03-22T10:06:30.071409" elapsed="0.079790"/>
 </kw>
-<status status="PASS" start="2025-03-18T16:58:06.813553" elapsed="6.332875"/>
+<status status="PASS" start="2025-03-22T10:06:25.109832" elapsed="5.042135"/>
 </test>
 <test id="s1-t2" name="Select Observations" line="14">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:13.147841" level="INFO">Clicking element 'xpath=//button[contains(text(),'Sää')]'.</msg>
-<msg time="2025-03-18T16:58:13.323170" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-18T16:58:13.323480" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</msg>
+<msg time="2025-03-22T10:06:30.156119" level="INFO">Clicking element 'xpath=//button[contains(text(),'Sää')]'.</msg>
+<msg time="2025-03-22T10:06:30.370557" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-22T10:06:30.370832" level="FAIL">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</msg>
 <arg>xpath=//button[contains(text(),'Sää')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-18T16:58:13.147487" elapsed="0.189392">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</status>
+<status status="FAIL" start="2025-03-22T10:06:30.155423" elapsed="0.219410">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:13.337270" elapsed="0.000067"/>
+<status status="NOT RUN" start="2025-03-22T10:06:30.375255" elapsed="0.000057"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>xpath=//span[contains(text(),'Lämpötila')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:13.337619" elapsed="0.000043"/>
+<status status="NOT RUN" start="2025-03-22T10:06:30.375638" elapsed="0.000042"/>
 </kw>
-<status status="FAIL" start="2025-03-18T16:58:13.147060" elapsed="0.190885">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</status>
+<status status="FAIL" start="2025-03-22T10:06:30.154470" elapsed="0.221549">Element with locator 'xpath=//button[contains(text(),'Sää')]' not found.</status>
 </test>
 <test id="s1-t3" name="Download Data" line="21">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:13.339956" level="INFO">Clicking button 'xpath=//button[contains(text(),'Lataa')]'.</msg>
-<msg time="2025-03-18T16:58:13.597586" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-18T16:58:13.597868" level="FAIL">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</msg>
+<msg time="2025-03-22T10:06:30.378597" level="INFO">Clicking button 'xpath=//button[contains(text(),'Lataa')]'.</msg>
+<msg time="2025-03-22T10:06:30.585540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-22T10:06:30.585780" level="FAIL">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</msg>
 <arg>xpath=//button[contains(text(),'Lataa')]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-18T16:58:13.339691" elapsed="0.261501">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</status>
+<status status="FAIL" start="2025-03-22T10:06:30.378116" elapsed="0.209398">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:13.601826" elapsed="0.000101"/>
+<status status="NOT RUN" start="2025-03-22T10:06:30.587958" elapsed="0.000065"/>
 </kw>
-<status status="FAIL" start="2025-03-18T16:58:13.338885" elapsed="0.263679">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</status>
+<status status="FAIL" start="2025-03-22T10:06:30.377271" elapsed="0.211063">Button with locator 'xpath=//button[contains(text(),'Lataa')]' not found.</status>
 </test>
 <test id="s1-t4" name="Close Browser" line="26">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-18T16:58:13.604973" elapsed="2.645460"/>
+<status status="PASS" start="2025-03-22T10:06:30.590237" elapsed="2.492644"/>
 </kw>
-<status status="PASS" start="2025-03-18T16:58:13.604159" elapsed="2.647672"/>
+<status status="PASS" start="2025-03-22T10:06:30.589745" elapsed="2.494733"/>
 </test>
-<test id="s1-t5" name="Get Weather Data" line="33">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:16.256533" level="INFO">Opening browser 'chrome' to base url 'https://www.ilmatieteenlaitos.fi/havaintojen-lataus'.</msg>
-<arg>https://www.ilmatieteenlaitos.fi/havaintojen-lataus</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-18T16:58:16.256019" elapsed="4.950505"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-18T16:58:21.207209" elapsed="0.200449"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T16:58:23.410200" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T16:58:21.409692" elapsed="2.000621"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//button[contains(text(),'Salli kaikki evästeet')]</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-18T16:58:23.410759" elapsed="0.146950"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:23.558405" level="INFO">Clicking element 'xpath=//button[contains(text(),'Salli kaikki evästeet')]'.</msg>
-<arg>xpath=//button[contains(text(),'Salli kaikki evästeet')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-18T16:58:23.558102" elapsed="1.826402"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-18T16:58:27.385848" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-18T16:58:25.384981" elapsed="2.001109"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-18T16:58:27.387478" level="INFO">Clicking element 'id=tab-2'.</msg>
-<msg time="2025-03-18T16:58:27.582758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-03-18T16:58:27.583020" level="FAIL">Element with locator 'id=tab-2' not found.</msg>
-<arg>id=tab-2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2025-03-18T16:58:27.386877" elapsed="0.199066">Element with locator 'id=tab-2' not found.</status>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:27.586723" elapsed="0.000101"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:27.587702" elapsed="0.000071"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-18T16:58:27.588219" elapsed="0.000047"/>
-</kw>
-<status status="FAIL" start="2025-03-18T16:58:16.254781" elapsed="11.333849">Element with locator 'id=tab-2' not found.</status>
-</test>
-<status status="FAIL" start="2025-03-18T16:58:06.275547" elapsed="21.315405"/>
+<status status="FAIL" start="2025-03-22T10:06:24.586482" elapsed="8.502067"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="3" skip="0">All Tests</stat>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Breeze Bot" id="s1" pass="2" fail="3" skip="0">Breeze Bot</stat>
+<stat name="Breeze Bot" id="s1" pass="2" fail="2" skip="0">Breeze Bot</stat>
 </suite>
 </statistics>
 <errors>

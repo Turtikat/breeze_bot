@@ -1,13 +1,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 🔍 Aseta tiedostonimi (vaihda tähän oikea nimi!)
+# 📂 Aseta oikea tiedostonimi (muuta tarvittaessa)
 excel_file = "weather_data.xlsx"
 
-# 📂 Luetaan Excel-tiedosto
+# 🔍 Luetaan Excel-tiedosto
 df = pd.read_excel(excel_file)
 
-# 🔎 Tarkistetaan, mitkä sarakkeet on käytössä
+# 🔎 Tarkistetaan, että sarakkeet näkyvät oikein
 print(df.head())
 
 # 📊 Piirretään kaavio

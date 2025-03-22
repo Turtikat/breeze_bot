@@ -1,53 +1,40 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Collections
+Library    OperatingSystem
 
 *** Variables ***
-${URL}    https://www.ilmatieteenlaitos.fi/havaintojen-lataus#!/
-${BROWSER}    Chrome
-
-*** Test Cases ***
-Open Weather Data Page
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
-    Wait Until Page Contains    Havaintojen lataus
-
-Select Observations
-    # Tässä vaiheessa lisätään tarvittavat klikkaukset ja valinnat sivulta
-    # Esimerkki:
-    Click Element    xpath=//button[contains(text(),'Sää')]
-    Sleep    2s
-    Click Element    xpath=//span[contains(text(),'Lämpötila')]
-
-Download Data
-    # Klikataan latauspainiketta ja odotetaan lataus
-    Click Button    xpath=//button[contains(text(),'Lataa')]
-    Sleep    5s
-
-Close Browser
-    Close Browser
-
-*** Settings ***
-Library    SeleniumLibrary
+${URL}    https://www.ilmatieteenlaitos.fi/havaintojen-lataus
+${BROWSER}    chrome
+${CSV_FILE}    weather_data.csv
 
 *** Test Cases ***
 Get Weather Data
-    Open Browser    https://www.ilmatieteenlaitos.fi/havaintojen-lataus    chrome
+    Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
     Sleep    2s  # Odotetaan, että sivu latautuu
 
-    # Jos evästeikkuna näkyy, suljetaan se
+    # Suljetaan evästeikkuna
     Wait Until Element Is Visible    xpath=//button[contains(text(),'Salli kaikki evästeet')]    timeout=5s
     Click Element    xpath=//button[contains(text(),'Salli kaikki evästeet')]
-    Sleep    2s  # Pieni odotus, että ikkuna sulkeutuu
+    Sleep    2s  
 
     # Klikataan "Päivittäishavainnot"-välilehteä
     Click Element    id=tab-2
-    Sleep    2s  # Odotetaan, että välilehti vaihtuu
+    Sleep    2s  
 
-    # Otetaan kuvakaappaus varmistukseksi
+    # Klikataan "Hae tiedot" -painiketta
+    Click Element    xpath=//button[contains(text(),'Hae tiedot')]
+    Sleep    5s  # Odotetaan, että data latautuu
+
+    # Haetaan taulukon sisältö
+    ${weather_data}=    Get Text    xpath=//table[@id='data-table']
+    Log To Console    ${weather_data}
+
+    # Tallennetaan tiedot CSV-muotoon
+    Create File    ${CSV_FILE}    ${weather_data}
+
+    # Otetaan kuvakaappaus
     Capture Page Screenshot
 
-    # Suljetaan selain
     Close Browser
-
-
